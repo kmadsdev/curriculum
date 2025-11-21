@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Latest CV</title>
-    <link rel="stylesheet" href="style.css">
-    <script scr="script.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Latest CV</title>
+<style>
+  :root{--bg:#0f1114;--fg:#eef2f7}
+  html,body{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,Arial}
+  .loader{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+  .spinner{width:56px;height:56px;border:6px solid rgba(255,255,255,0.08);border-top-color:var(--fg);border-radius:50%;animation:spin .85s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .msg{font-size:14px;opacity:.9}
+  .err{color:#ffcccc;padding:18px;text-align:center}
+  .embed-full{width:100%;height:100vh;border:0;display:block}
+</style>
 </head>
 <body>
-    <div id="root" class="loader">
-        <div class="spinner" aria-hidden="true"></div>
-        <div class="msg">Loading latest CV…</div>
-    </div>
+<div id="root" class="loader">
+  <div class="spinner" aria-hidden="true"></div>
+  <div class="msg">Loading latest CV…</div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
